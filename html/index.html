@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sensity</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <div class="sidebar">
+            <div class="logo">Sensity</div>
+            <div class="footer">
+                <i class="fas fa-gem"></i>
+                <span>0</span>
+            </div>
+        </div>
+        
+        <div class="main-content">
+            <button class="close-btn">×</button>
+            
+            <div class="header">
+                <div class="user-info">
+                    <img src="https://i.postimg.cc/Yq5wPhBJ/Jason-Duval-GTAVI-Portrait.webp" alt="Avatar" class="user-avatar">
+                    <div class="user-details">
+                        <span class="user-id">Identifiant - </span>
+                        <span class="user-name">Chargement...</span>
+                    </div>
+                </div>
+                
+                <div class="tabs">
+                    <div class="tab active" data-tab="shop">Boutique</div>
+                    <div class="tab" data-tab="history">Historique</div>
+                    <div class="tab" data-tab="inventory">Inventaire (0)</div>
+                </div>
+            </div>
+            
+            <div class="vehicles-grid">
+            </div>
+        </div>
+    </div>
+
+    <div class="pack-preview-modal" style="display: none;">
+        <div class="pack-preview-content">
+            <button class="close-preview-btn">×</button>
+            <h2 class="pack-title">Nom du Pack</h2>
+            
+            <div class="pack-items-container">
+                <div class="pack-items-scroll">
+                </div>
+            </div>
+            
+            <div class="pack-footer">
+                <div class="pack-price">
+                    <i class="fas fa-gem"></i>
+                    <span>0</span>
+                </div>
+                <button class="buy-pack-btn">Acheter</button>
+            </div>
+        </div>
+    </div>
+
+    <div class="case-preview-modal" style="display: none;">
+        <div class="case-preview-content">
+            <button class="close-case-preview-btn">×</button>
+            <h2 class="case-preview-title">Contenu possible</h2>
+            
+            <div class="case-preview-items">
+            </div>
+            
+            <div class="case-preview-footer">
+                <div class="case-price">
+                    <i class="fas fa-gem"></i>
+                    <span>0</span>
+                </div>
+                <button class="start-case-opening-btn">Ouvrir la caisse</button>
+            </div>
+        </div>
+    </div>
+
+    <div class="case-opening-modal" style="display: none;">
+        <div class="case-opening-content">
+            <button class="close-case-btn">×</button>
+            <h2 class="case-title">Ouverture de caisse</h2>
+            
+            <div class="case-opening-container">
+                <div class="case-items-wrapper">
+                    <div class="case-items-scroll">
+                    </div>
+                </div>
+                <div class="case-selector"></div>
+            </div>
+            
+            <div class="case-footer">
+                <div class="case-price">
+                    <i class="fas fa-gem"></i>
+                    <span>0</span>
+                </div>
+                <button class="open-case-btn">Ouvrir la caisse</button>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html> 
