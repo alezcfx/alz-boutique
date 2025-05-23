@@ -307,7 +307,7 @@ function ProcessPack(xPlayer, pack)
         for _, vehicle in ipairs(pack.content.vehicles) do
             local plate = GeneratePlate()
             
-            MySQL.Async.execute("INSERT INTO owned_vehicles (owner, plate, vehicle, type, stored) VALUES (@owner, @plate, @vehicle, 'car', 1)", {
+            MySQL.Async.execute("INSERT INTO owned_vehicles (owner, plate, vehicle, type) VALUES (@owner, @plate, @vehicle, 'car')", {
                 ["@owner"] = xPlayer.identifier,
                 ["@plate"] = plate,
                 ["@vehicle"] = json.encode({ model = vehicle.model, plate = plate })
@@ -553,7 +553,7 @@ ESX.RegisterServerCallback('alz-boutique:casePrizeWon', function(source, cb, cas
     
     if prizeItem.type == 'vehicle' then
         local plate = GeneratePlate()
-        MySQL.Async.execute("INSERT INTO owned_vehicles (owner, plate, vehicle, type, stored) VALUES (@owner, @plate, @vehicle, 'car', 1)", {
+        MySQL.Async.execute("INSERT INTO owned_vehicles (owner, plate, vehicle, type) VALUES (@owner, @plate, @vehicle, 'car')", {
             ["@owner"] = xPlayer.identifier,
             ["@plate"] = plate,
             ["@vehicle"] = json.encode({ model = prizeItem.spawnName, plate = plate })
@@ -710,7 +710,7 @@ ESX.RegisterServerCallback('alz-boutique:claimItem', function(source, cb, itemId
         
         if pendingItem.category == "vehicules" then
             local plate = GeneratePlate()
-            MySQL.Async.execute("INSERT INTO owned_vehicles (owner, plate, vehicle, type, stored) VALUES (@owner, @plate, @vehicle, 'car', 1)", {
+            MySQL.Async.execute("INSERT INTO owned_vehicles (owner, plate, vehicle, type) VALUES (@owner, @plate, @vehicle, 'car')", {
                 ["@owner"] = xPlayer.identifier,
                 ["@plate"] = plate,
                 ["@vehicle"] = json.encode({ model = pendingItem.item_name, plate = plate })
